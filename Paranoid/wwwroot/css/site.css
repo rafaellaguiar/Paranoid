@@ -44,3 +44,18 @@ td {
 .inputAlias:focus, input:focus {
     outline: none;
 }
+
+.d-none-fade-out {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1000ms 0ms;
+}
+
+.d-inline-fade-in {
+    opacity: 1;
+    transition: opacity 0ms 1000ms;
+}
+
+.hidden-alert{
+    visibility: hidden;
+}

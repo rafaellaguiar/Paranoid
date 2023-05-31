@@ -15,10 +15,6 @@
     });
 });
 
-function setAlias() {
-
-}
-
 var lastCopied = ""
 
 function copyToClipBoard(value) {
@@ -39,11 +35,11 @@ function copyToClipBoard(value) {
 }
 
 function alertTimeout() {
-    $("#alertCopy").removeClass("d-none");
-    $("#alertCopy").addClass("d-inline");
+    $("#alertCopy").removeClass("hidden-alert");
+    $("#alertCopy").addClass("d-inline-fade-in");
     setTimeout(() => {
-        $("#alertCopy").removeClass("d-inline");
-        $("#alertCopy").addClass("d-none");
+        $("#alertCopy").removeClass("d-inline-fade-in");
+        $("#alertCopy").addClass("d-none-fade-out");
     }, 3000);
 
 }
