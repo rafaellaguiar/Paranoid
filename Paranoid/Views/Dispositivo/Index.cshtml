@@ -1,10 +1,8 @@
-﻿@page
-@using Paranoid.Service
+﻿@using Paranoid.Service
 @using Paranoid.Model
-@using Paranoid.ViewModel
 @{
     ViewData["Title"] = "Home page";
-    ViewData["Dispositivos"] = new DispositivosViewModel().dispositivos;
+     var dispositivos = ViewData["ListaDispositivos"] as List<Dispositivo>;
 }
 
 <div class="text-start">
@@ -19,11 +17,11 @@
                     <th></th>
                     <th>Type</th>
                 </tr>
-                @foreach (var line in ViewData["Dispositivos"] as List<Dispositivo>)
+                @foreach (var dispositivo in dispositivos)
                 {
-                    var ipAddress = line.Ip;
-                    var macAddress = line.MacAdress;
-                    var tipo = line.Tipo;
+                    var ipAddress = dispositivo.Ip;
+                    var macAddress = dispositivo.MacAdress;
+                    var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
                         <input type="email" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="emailHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">

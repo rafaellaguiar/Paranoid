@@ -1,10 +1,11 @@
 ﻿using Paranoid.Helpers;
 using Paranoid.Model;
+using Paranoid.Service.Interfaces;
 using System.Diagnostics;
 
 namespace Paranoid.Service
 {
-    public class BlueService
+    public class BlueService : IBlueService
     {
         List<Dispositivo> listaDispositivos = new List<Dispositivo>();
         public List<Dispositivo> GetDispositivosNaRede()
