@@ -1,0 +1,35 @@
+﻿@page
+@using Paranoid.Service
+@using Paranoid.Model
+@using Paranoid.ViewModel
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["Dispositivos"] = new DispositivosViewModel().dispositivos;
+}
+
+<div class="text-start">
+    <p class="display-4 text-center">Dispositivos na sua rede: </p>
+    <table-responsive>
+        <table align="center">
+    <tr>
+        <th>IP</th>
+        <th>MAC</th>
+        <th></th>
+        <th>Tipo</th>
+    </tr>
+    @foreach (var line in ViewData["Dispositivos"] as List<Dispositivo>)
+    {
+            var ipAddress = line.Ip;
+            var macAddress = line.MacAdress;
+            var tipo = line.Tipo;
+            <tr>
+                <td>@ipAddress</td>
+                <td>@macAddress </td>
+                <td> <a class="copiar" data-bs-toggle="tooltip" title="Copiar MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                <td>@tipo</td>
+            </tr>
+    }
+    </table>
+    </table-responsive>
+    
+</div>

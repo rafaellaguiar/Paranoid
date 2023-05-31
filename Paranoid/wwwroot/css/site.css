@@ -1,0 +1,38 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin-top: -8px;
+}
+
+td {
+    border-bottom: 1px solid ;
+    padding-bottom: 8px;
+    border-left-width: 0;
+    min-width: 120px;
+    height: 18px;
+}
+
+.copiar {
+    cursor: pointer;
+    color: #000000;
+    padding-left: 1rem;
+}
