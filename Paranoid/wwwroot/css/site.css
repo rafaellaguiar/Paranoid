@@ -36,3 +36,11 @@ td {
     color: #000000;
     padding-left: 1rem;
 }
+
+.inputAlias {
+    border: none;
+}
+
+.inputAlias:focus, input:focus {
+    outline: none;
+}

@@ -8,28 +8,54 @@
 }
 
 <div class="text-start">
-    <p class="display-4 text-center">Dispositivos na sua rede: </p>
-    <table-responsive>
-        <table align="center">
-    <tr>
-        <th>IP</th>
-        <th>MAC</th>
-        <th></th>
-        <th>Tipo</th>
-    </tr>
-    @foreach (var line in ViewData["Dispositivos"] as List<Dispositivo>)
-    {
-            var ipAddress = line.Ip;
-            var macAddress = line.MacAdress;
-            var tipo = line.Tipo;
-            <tr>
-                <td>@ipAddress</td>
-                <td>@macAddress </td>
-                <td> <a class="copiar" data-bs-toggle="tooltip" title="Copiar MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
-                <td>@tipo</td>
-            </tr>
-    }
-    </table>
-    </table-responsive>
-    
+    <p class="display-4 text-center">Devices on your network:  </p>
+    <div class="row">
+         <table-responsive>
+            <table align="center">
+                <tr>
+                    <th>Alias</th>
+                    <th>IP</th>
+                    <th>MAC</th>
+                    <th></th>
+                    <th>Tipo</th>
+                </tr>
+                @foreach (var line in ViewData["Dispositivos"] as List<Dispositivo>)
+                {
+                    var ipAddress = line.Ip;
+                    var macAddress = line.MacAdress;
+                    var tipo = line.Tipo;
+                <tr>
+                    <td>
+                        <input type="email" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="emailHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
+                        <p class="d-none" id="@(macAddress + "alias")"></p>
+                    </td>
+                    <td>@ipAddress</td>
+                    <td class="tdMacAddress">@macAddress</td>
+                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copiar MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                    <td>@tipo</td>
+                </tr>
+                }
+            </table>
+        </table-responsive>
+    </div>
+   
+    <div class="row justify-content-center pt-3">
+        <div class="col-2">
+            <div class="alert alert-success d-none" id="alertCopy" role="alert">
+                Copiado!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeAlias(alias, macAddress) {
+            $("#" + macAddress + "alias").text(alias);
+            $("#" + macAddress + "alias").removeClass("d-none");
+            $("#" + macAddress + "alias").addClass("d-inline");
+            $("#aliasInput" + macAddress).addClass("d-none");
+
+            localStorage.setItem('Alias' + macAddress, alias);
+        }
+        
+    </script>
 </div>

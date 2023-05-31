@@ -1,10 +1,12 @@
-﻿using Paranoid.Model;
+﻿using Paranoid.Helpers;
+using Paranoid.Model;
 using System.Diagnostics;
 
 namespace Paranoid.Service
 {
     public class BlueService
     {
+        List<Dispositivo> listaDispositivos = new List<Dispositivo>();
         public List<Dispositivo> GetDispositivosNaRede()
         {
             Process p = new Process();
@@ -16,8 +18,6 @@ namespace Paranoid.Service
 
             p.Start();
             string output = p.StandardOutput.ReadToEnd();
-
-            List<Dispositivo> listaDispositivos = new List<Dispositivo>();
 
             if (output.Equals("") || output.Equals(string.Empty))
                 return listaDispositivos;
@@ -40,7 +40,7 @@ namespace Paranoid.Service
 
                     dispostivo.Ip = items[0];
                     dispostivo.MacAdress = items[1];
-                    dispostivo.Tipo = items[2];
+                    dispostivo.Tipo = Helper.CapitalizeFirstLetter(items[2]);
 
                     listaDispositivos.Add(dispostivo);
                 }
@@ -49,4 +49,6 @@ namespace Paranoid.Service
             return listaDispositivos.DistinctBy(m => m.MacAdress).ToList();
         }
     }
+
+    
 }
