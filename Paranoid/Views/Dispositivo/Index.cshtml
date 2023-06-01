@@ -21,6 +21,7 @@
                 {
                     var ipAddress = dispositivo.Ip;
                     var macAddress = dispositivo.MacAdress;
+                    var macAddressView = macAddress.Replace("-", ":");
                     var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
@@ -28,8 +29,8 @@
                         <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
-                    <td class="tdMacAddress">@macAddress</td>
-                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                    <td>@macAddressView<span class="d-none tdMacAddress">@macAddress</span></td>
+                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard"><i id="@macAddress" onclick="copyToClipBoard('@macAddressView')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
                     <td align="center">
                         <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i>
@@ -56,7 +57,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modal-detalhes">Available information: </h5>
+            <h5 class="modal-title" id="exampleModalCenterTitle">Available information: </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
