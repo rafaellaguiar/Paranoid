@@ -59,9 +59,14 @@ var detalheDispositivo
 var mensagem = ""
 
 function viewDetail(macAddress) {
-    var myModal = new bootstrap.Modal(document.getElementById('detalheModal'), {
+    var modalDetalhe = new bootstrap.Modal(document.getElementById('detalheModal'), {
         keyboard: false
-    })
+    });
+
+    var erroModal = new bootstrap.Modal(document.getElementById('erroApi'), {
+        keyboard: false
+    });
+
     $.ajax({
         url: "get/detalhe?macAddress=" + macAddress,
 
@@ -78,7 +83,11 @@ function viewDetail(macAddress) {
             $("#companyaddress2").text(detalheDispositivo.addressL2 == null ? "No information" : detalheDispositivo.addressL2)
             $("#companyaddress3").text(detalheDispositivo.addressL3 == null ? "No information" : detalheDispositivo.addressL3)
 
-            myModal.show();
+            modalDetalhe.show();
+        },
+
+        error: () => {
+            erroModal.show();
         }
     })
 }
