@@ -55,5 +55,33 @@ function changeInputVisibility() {
     $('#btnEdit').addClass('d-none')
 }
 
+var detalheDispositivo
+var mensagem = ""
+
+function viewDetail(macAddress) {
+    var myModal = new bootstrap.Modal(document.getElementById('detalheModal'), {
+        keyboard: false
+    })
+    $.ajax({
+        url: "get/detalhe?macAddress=" + macAddress,
+
+        success: (data) => {
+            detalheDispositivo = data;
+            mensagem = data.mensagemRetorno
+
+        },
+
+        complete: () => {
+            $("#company").text(detalheDispositivo.company == null ? "No information" : detalheDispositivo.company)
+            $("#country").text(detalheDispositivo.country == null ? "No information" : detalheDispositivo.country)
+            $("#companyaddress1").text(detalheDispositivo.addressL1 == null ? "No information" : detalheDispositivo.addressL1)
+            $("#companyaddress2").text(detalheDispositivo.addressL2 == null ? "No information" : detalheDispositivo.addressL2)
+            $("#companyaddress3").text(detalheDispositivo.addressL3 == null ? "No information" : detalheDispositivo.addressL3)
+
+            myModal.show();
+        }
+    })
+}
+
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

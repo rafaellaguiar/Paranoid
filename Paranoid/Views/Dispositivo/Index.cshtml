@@ -6,7 +6,7 @@
 }
 
 <div class="text-start">
-    <p class="display-4 text-center">Devices on your network:  </p>
+    <p class="display-4 text-center">Devices on your network: </p>
     <div class="row">
          <table-responsive>
             <table align="center">
@@ -31,6 +31,7 @@
                     <td class="tdMacAddress">@macAddress</td>
                     <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
+                    <td align="center"><i class="bi bi-info-circle detalhes" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i></td>
                 </tr>
                 }
             </table>
@@ -40,8 +41,27 @@
     <div class="row justify-content-center pt-3">
         <div class="col-2">
             <div class="alert alert-success hidden-alert text-center" id="alertCopy" role="alert">
-                Copiado!
+                Copied!
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="detalheModal" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Avaible information: </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Company name: <span id="company" class="text-detalhe"></span> </p>
+            <p>Country: <span id="country" class="text-detalhe"></span> </p>
+            <p>Company Address 1: <span id="companyaddress1" class="text-detalhe"></span> </p>
+            <p>Company Address 2: <span id="companyaddress2" class="text-detalhe"></span> </p>
+            <p>Company Address 3: <span id="companyaddress3" class="text-detalhe"></span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>

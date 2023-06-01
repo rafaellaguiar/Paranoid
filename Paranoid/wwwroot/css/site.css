@@ -59,3 +59,12 @@ td {
 .hidden-alert{
     visibility: hidden;
 }
+
+.detalhes {
+    cursor: pointer;
+}
+
+.text-detalhe {
+    font-style: italic;
+    color: #808080;
+}
