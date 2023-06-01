@@ -2,7 +2,7 @@
 @using Paranoid.Model
 @{
     ViewData["Title"] = "Home page";
-     var dispositivos = ViewData["ListaDispositivos"] as List<Dispositivo>;
+    var dispositivos = ViewData["ListaDispositivos"] as List<Dispositivo>;
 }
 
 <div class="text-start">
@@ -25,11 +25,11 @@
                 <tr>
                     <td>
                         <input type="email" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="emailHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
-                        <p class="d-none" id="@(macAddress + "alias")"></p>
+                        <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
                     <td class="tdMacAddress">@macAddress</td>
-                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copiar MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
                 </tr>
                 }
@@ -44,16 +44,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function changeAlias(alias, macAddress) {
-            $("#" + macAddress + "alias").text(alias);
-            $("#" + macAddress + "alias").removeClass("d-none");
-            $("#" + macAddress + "alias").addClass("d-inline");
-            $("#aliasInput" + macAddress).addClass("d-none");
-
-            localStorage.setItem('Alias' + macAddress, alias);
-        }
-        
-    </script>
 </div>

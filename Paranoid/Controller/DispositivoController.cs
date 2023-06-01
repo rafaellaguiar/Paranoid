@@ -2,7 +2,6 @@
 using Paranoid.Model;
 using Paranoid.Service;
 using Paranoid.Service.Interfaces;
-using Paranoid.ViewModel;
 
 namespace Paranoid
 {

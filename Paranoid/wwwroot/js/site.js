@@ -5,12 +5,7 @@
         let macAddress = item.textContent;
 
         if (alias != null) {
-            $('#' + item.textContent + "alias").text(macAddress);
-
-            $("#" + macAddress + "alias").text(alias);
-            $("#" + macAddress + "alias").removeClass("d-none");
-            $("#" + macAddress + "alias").addClass("d-inline");
-            $("#aliasInput" + macAddress).addClass("d-none");
+            $("#aliasInput" + macAddress).val(alias);
         }
     });
 });
@@ -32,6 +27,12 @@ function copyToClipBoard(value) {
     alertTimeout()
 
     lastCopied = value;
+}
+
+function changeAlias(alias, macAddress) {
+    if (alias != "") {
+        localStorage.setItem('Alias' + macAddress, alias);
+    }
 }
 
 function alertTimeout() {
