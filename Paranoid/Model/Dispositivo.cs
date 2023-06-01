@@ -8,16 +8,12 @@ namespace Paranoid.Model
         private string _macAddress { get; set; }
         public string MacAdress {
             get { return _macAddress; }
-            set { 
-                _macAddress = value.Replace("-", ":").ToUpper(); 
-            } 
+            set { _macAddress = value.Replace("-", ":").ToUpper(); } 
         }
         private string _tipo { get; set; }
         public string Tipo { 
             get { return _tipo; } 
-            set {
-                _tipo = Helper.CapitalizeFirstLetter(value);
-            } 
+            set { _tipo = Helper.CapitalizeFirstLetter(value); } 
         } 
         public string Alias { get; set; }
     }
