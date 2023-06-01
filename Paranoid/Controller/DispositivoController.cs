@@ -41,8 +41,7 @@ namespace Paranoid
 
         private async Task<DetalheDispositivo> ObterDetalheDispositivo(string macAddress)
         {
-            var mac = macAddress.Replace("-", ":").ToUpper();
-            return await _speculationService.GetDetalheDispositivo(mac);
+            return await _speculationService.GetDetalheDispositivo(macAddress);
         }
     }
 }
