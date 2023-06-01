@@ -24,7 +24,7 @@
                     var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
-                        <input type="email" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="emailHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
+                        <input type="text" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
                         <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
