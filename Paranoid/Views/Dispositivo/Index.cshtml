@@ -24,12 +24,12 @@
                     var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
-                        <input type="text" class="inputAlias" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
+                        <input type="text" class="inputAlias text-truncate" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
                         <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
                     <td class="tdMacAddress">@macAddress</td>
-                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                    <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
                     <td align="center">
                         <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i>
