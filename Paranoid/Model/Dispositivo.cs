@@ -1,4 +1,6 @@
-﻿namespace Paranoid.Model
+﻿using Paranoid.Helpers;
+
+namespace Paranoid.Model
 {
     public class Dispositivo
     {
@@ -10,7 +12,13 @@
                 _macAddress = value.Replace("-", ":").ToUpper(); 
             } 
         }
-        public string Tipo { get; set; } 
+        private string _tipo { get; set; }
+        public string Tipo { 
+            get { return _tipo; } 
+            set {
+                _tipo = Helper.CapitalizeFirstLetter(value);
+            } 
+        } 
         public string Alias { get; set; }
     }
 }

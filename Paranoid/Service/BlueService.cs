@@ -41,7 +41,7 @@ namespace Paranoid.Service
 
                     dispostivo.Ip = items[0];
                     dispostivo.MacAdress = items[1];
-                    dispostivo.Tipo = Helper.CapitalizeFirstLetter(items[2]);
+                    dispostivo.Tipo = items[2];
 
                     listaDispositivos.Add(dispostivo);
                 }
