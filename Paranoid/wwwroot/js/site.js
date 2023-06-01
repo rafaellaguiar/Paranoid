@@ -80,9 +80,7 @@ function viewDetail(macAddress) {
 
             $("#spinner-detalhes-" + macAddress).addClass("d-none");
             $("#icon-detalhe-" + macAddress).removeClass("d-none");
-        },
 
-        complete: () => {
             $("#company").text(detalheDispositivo.company == null ? "No information" : detalheDispositivo.company);
             $("#country").text(detalheDispositivo.country == null ? "No information" : detalheDispositivo.country);
             $("#companyaddress1").text(detalheDispositivo.addressL1 == null ? "No information" : detalheDispositivo.addressL1);
@@ -93,6 +91,9 @@ function viewDetail(macAddress) {
         },
 
         error: () => {
+            $("#spinner-detalhes-" + macAddress).addClass("d-none");
+            $("#icon-detalhe-" + macAddress).removeClass("d-none");
+
             erroModal.show();
         }
     })
