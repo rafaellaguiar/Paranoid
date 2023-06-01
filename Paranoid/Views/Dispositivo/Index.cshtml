@@ -1,7 +1,7 @@
 ﻿@using Paranoid.Service
 @using Paranoid.Model
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Paranoid";
     var dispositivos = ViewData["ListaDispositivos"] as List<Dispositivo>;
 }
 
@@ -31,7 +31,13 @@
                     <td class="tdMacAddress">@macAddress</td>
                     <td> <a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy MAC"><i id="@macAddress" onclick="copyToClipBoard('@macAddress')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
-                    <td align="center"><i class="bi bi-info-circle detalhes" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i></td>
+                    <td align="center">
+                        <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i>
+
+                        <div class="spinner-grow spinner-grow-sm d-none" id="spinner-detalhes-@macAddress" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </td>
                 </tr>
                 }
             </table>
