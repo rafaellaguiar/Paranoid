@@ -25,7 +25,7 @@
                     var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
-                        <input type="text" class="inputAlias text-truncate" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress')">
+                        <input type="text" class="inputAlias text-truncate" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress', false)">
                         <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
@@ -33,7 +33,7 @@
                     <td><a class="copiar" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard"><i id="@macAddress" onclick="copyToClipBoard('@macAddressView')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
                     <td align="center">
-                        <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail('@macAddress')"></i>
+                        <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail.getDetail('@macAddress')"></i>
 
                         <div class="spinner-grow spinner-grow-sm d-none" id="spinner-detalhes-@macAddress" role="status">
                             <span class="visually-hidden">Loading...</span>
@@ -67,6 +67,11 @@
             <p>Company Address 2: <span id="companyaddress2" class="text-detalhe"></span> </p>
             <p>Company Address 3: <span id="companyaddress3" class="text-detalhe"></span> </p>
           </div>
+           <div class="modal-footer">
+               <p>Save company name as alias? <i class="bi bi-exclamation-circle-fill" data-bs-toggle="tooltip" data-bs-placement="top" title="Only when company name is valid"></i></p>
+               <button class="btn btn-primary" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()">Yes</button>
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+           </div>
         </div>
       </div>
     </div>
