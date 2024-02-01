@@ -60,46 +60,6 @@ function changeInputVisibility() {
 
 var detalheDispositivo
 var mensagem = ""
-function viewDetail(macAddress) {
-    var modalDetalhe = new bootstrap.Modal(document.getElementById('detalheModal'), {
-        keyboard: false
-    });
-
-    var erroModal = new bootstrap.Modal(document.getElementById('erroApi'), {
-        keyboard: false
-    });
-
-    $.ajax({
-        url: "get/detalhe?macAddress=" + macAddress,
-        beforeSend: () => {
-            $("#spinner-detalhes-" + macAddress).removeClass("d-none");
-            $("#icon-detalhe-" + macAddress).addClass("d-none");
-        },
-
-        success: (data) => {
-            detalheDispositivo = data;
-            mensagem = data.mensagemRetorno
-
-            $("#spinner-detalhes-" + macAddress).addClass("d-none");
-            $("#icon-detalhe-" + macAddress).removeClass("d-none");
-
-            $("#company").text(detalheDispositivo.company == null ? "No information" : detalheDispositivo.company);
-            $("#country").text(detalheDispositivo.country == null ? "No information" : detalheDispositivo.country);
-            $("#companyaddress1").text(detalheDispositivo.addressL1 == null ? "No information" : detalheDispositivo.addressL1);
-            $("#companyaddress2").text(detalheDispositivo.addressL2 == null ? "No information" : detalheDispositivo.addressL2);
-            $("#companyaddress3").text(detalheDispositivo.addressL3 == null ? "No information" : detalheDispositivo.addressL3);
-
-            modalDetalhe.show();
-        },
-
-        error: () => {
-            $("#spinner-detalhes-" + macAddress).addClass("d-none");
-            $("#icon-detalhe-" + macAddress).removeClass("d-none");
-
-            erroModal.show();
-        }
-    })
-}
 
 var modalDetalhe = new bootstrap.Modal(document.getElementById('detalheModal'), {
     keyboard: false
