@@ -67,10 +67,8 @@
             <p>Company Address 2: <span id="companyaddress2" class="text-detalhe"></span> </p>
             <p>Company Address 3: <span id="companyaddress3" class="text-detalhe"></span> </p>
           </div>
-           <div class="modal-footer">
-               <p>Save company name as alias? <i class="bi bi-exclamation-circle-fill" data-bs-toggle="tooltip" data-bs-placement="top" title="Only possible when company name is valid"></i></p>
-               <button class="btn btn-primary" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()">Yes</button>
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+           <div class="modal-footer justify-content-start">
+               <button class="btn btn-save-alias" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()" data-bs-toggle="tooltip" data-bs-placement="top" title="Only possible when company name is valid">Save company name as alias</button>
            </div>
         </div>
       </div>
