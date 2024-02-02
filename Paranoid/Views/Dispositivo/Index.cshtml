@@ -25,7 +25,7 @@
                     var tipo = dispositivo.Tipo;
                 <tr>
                     <td>
-                        <input type="text" class="inputAlias text-truncate" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress', false)">
+                        <input type="text" class="inputAlias text-truncate input-alias-placeholder" id="@("aliasInput" + macAddress)" aria-describedby="aliasHelp" placeholder="Enter alias" onfocusout="changeAlias(this.value, '@macAddress', false)">
                         <span class="d-none" id="@(macAddress + "alias")"></span>
                     </td>
                     <td>@ipAddress</td>
@@ -57,18 +57,18 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Available information: </h5>
+            <h5 class="modal-title" id="available-info">Available information: </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Company name: <span id="company" class="text-detalhe"></span> </p>
-            <p>Country: <span id="country" class="text-detalhe"></span> </p>
-            <p>Company Address 1: <span id="companyaddress1" class="text-detalhe"></span> </p>
-            <p>Company Address 2: <span id="companyaddress2" class="text-detalhe"></span> </p>
-            <p>Company Address 3: <span id="companyaddress3" class="text-detalhe"></span> </p>
+            <p><span id="company-name">Company name:</span><span id="company" class="text-detalhe"></span> </p>
+            <p><span id="country-label">Country:</span><span id="country" class="text-detalhe"></span> </p>
+            <p><span id="compranyaddress1-label">Company Address 1:</span> <span id="companyaddress1" class="text-detalhe"></span> </p>
+            <p><span id="compranyaddress2-label">Company Address 2:</span> <span id="companyaddress2" class="text-detalhe"></span> </p>
+            <p><span id="compranyaddress3-label">Company Address 3:</span> <span id="companyaddress3" class="text-detalhe"></span> </p>
           </div>
            <div class="modal-footer justify-content-start">
-               <button class="btn btn-save-alias" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()" data-bs-toggle="tooltip" data-bs-placement="top" title="Only possible when company name is valid">Save company name as alias</button>
+               <button class="btn btn-save-alias" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()">Save company name as alias</button>
            </div>
         </div>
       </div>

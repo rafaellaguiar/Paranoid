@@ -16,9 +16,44 @@
       "value-en": "Type"
     },
     {
-      "key": "copyTooltip",
-      "value-en": "Copy to clipboard",
-      "value-pt": "Copiar para area de transferencia"
+      "key": "company-name",
+      "value-pt": "Nome da empresa: ",
+      "value-en": "Company name: "
+    },
+    {
+      "key": "country-label",
+      "value-pt": "Pais: ",
+      "value-en": "Country: "
+    },
+    {
+      "key": "compranyaddress1-label",
+      "value-pt": "Endereco 1: ",
+      "value-en": "Company Address 1: "
+    },
+    {
+      "key": "compranyaddress2-label",
+      "value-pt": "Endereco 2: ",
+      "value-en": "Company Address 2: "
+    },
+    {
+      "key": "compranyaddress3-label",
+      "value-pt": "Endereco 3: ",
+      "value-en": "Company Address 3: "
+    },
+    {
+      "key": "btn-change-alias-yes",
+      "value-pt": "Salvar nome da empresa como apelido",
+      "value-en": "Save company name as alias"
+    },
+    {
+      "key": "available-info",
+      "value-pt": "Informacoes disponiveis",
+      "value-en": "Available information: "
+    },
+    {
+      "key": "input-alias-placeholder",
+      "value-pt": "Insira o apelido",
+      "value-en": "Enter alias"
     }
   ]
 }

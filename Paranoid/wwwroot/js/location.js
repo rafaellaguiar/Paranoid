@@ -21,6 +21,12 @@ function clickFlag(language) {
                 "aria-label": text,
             });
         }
+
+        if (locationObj[i].key.includes("placeholder")) {
+            $("." + locationObj[i].key).attr({
+                "placeholder": text
+            })
+        }
     }
 
 }
