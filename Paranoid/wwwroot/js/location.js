@@ -22,11 +22,8 @@ function clickFlag(language) {
             });
         }
 
-        if (locationObj[i].key.includes("placeholder")) {
-            $("." + locationObj[i].key).attr({
-                "placeholder": text
-            })
-        }
+        if (locationObj[i].key.includes("placeholder"))
+            $("." + locationObj[i].key).attr({"placeholder": text})
     }
 
 }

@@ -54,6 +54,11 @@
       "key": "input-alias-placeholder",
       "value-pt": "Insira o apelido",
       "value-en": "Enter alias"
+    },
+    {
+      "key": "alertCopy",
+      "value-pt": "Copiado!",
+      "value-en": "Copied!"
     }
   ]
 }
