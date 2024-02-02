@@ -26,17 +26,17 @@
       "value-en": "Country: "
     },
     {
-      "key": "compranyaddress1-label",
+      "key": "companyaddress1-label",
       "value-pt": "Endereco 1: ",
       "value-en": "Company Address 1: "
     },
     {
-      "key": "compranyaddress2-label",
+      "key": "companyaddress2-label",
       "value-pt": "Endereco 2: ",
       "value-en": "Company Address 2: "
     },
     {
-      "key": "compranyaddress3-label",
+      "key": "companyaddress3-label",
       "value-pt": "Endereco 3: ",
       "value-en": "Company Address 3: "
     },
@@ -59,6 +59,16 @@
       "key": "alertCopy",
       "value-pt": "Copiado!",
       "value-en": "Copied!"
+    },
+    {
+      "key": "modal-erro",
+      "value-pt": "Nao foi possivel achar detalhes",
+      "value-en": "Unable to get details"
+    },
+    {
+      "key": "modal-erro-body",
+      "value-pt": "Tente novamente mais tarde",
+      "value-en": "Please try again later"
     }
   ]
 }
