@@ -30,10 +30,10 @@
                     </td>
                     <td>@ipAddress</td>
                     <td>@macAddressView<span class="d-none tdMacAddress">@macAddress</span></td>
-                    <td><a class="copiar copyTooltip" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard"><i id="@macAddress" onclick="copyToClipBoard('@macAddressView')" class="bi bi-clipboard-check text-secondary"></i></a></td>
+                    <td><a class="copiar copyTooltip field-tip"><span class="tip-content copyTooltipText">Copy to clipboard</span><i id="@macAddress" onclick="copyToClipBoard('@macAddressView')" class="bi bi-clipboard-check text-secondary"></i></a></td>
                     <td>@tipo</td>
                     <td align="center">
-                        <i class="bi bi-info-circle detalhes" id="icon-detalhe-@macAddress" data-bs-toggle="tooltip" data-bs-placement="top" title="Take a close look" onclick="viewDetail.getDetail('@macAddress')"></i>
+                        <i class="bi bi-info-circle detalhes detailTooltip field-tip" id="icon-detalhe-@macAddress" onclick="viewDetail.getDetail('@macAddress')"> <span class="tip-content detailTooltipText">Take a close look</span></i>
 
                         <div class="spinner-grow spinner-grow-sm d-none" id="spinner-detalhes-@macAddress" role="status">
                             <span class="visually-hidden">Loading...</span>
@@ -68,7 +68,7 @@
             <p><span id="companyaddress3-label">Company Address 3:</span> <span id="companyaddress3" class="text-detalhe"></span> </p>
           </div>
            <div class="modal-footer justify-content-start">
-               <button class="btn btn-save-alias" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()">Save company name as alias</button>
+               <button class="btn btn-save-alias field-tip" type="submit" id="btn-change-alias-yes" onclick="viewDetail.saveCompanyNameAsAlias()">Save company name as alias</button>
            </div>
         </div>
       </div>

@@ -16,10 +16,7 @@ function clickFlag(language) {
         $("#" + locationObj[i].key).text(text);
 
         if (locationObj[i].key.includes("Tooltip")) {
-            $("." + locationObj[i].key).attr({
-                "data-bs-original-title": text,
-                "aria-label": text,
-            });
+            $("." + locationObj[i].key + "Text").text(text)
         }
 
         if (locationObj[i].key.includes("placeholder"))

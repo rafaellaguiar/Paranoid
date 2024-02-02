@@ -69,6 +69,16 @@
       "key": "modal-erro-body",
       "value-pt": "Tente novamente mais tarde",
       "value-en": "Please try again later"
+    },
+    {
+      "key": "copyTooltip",
+      "value-pt": "Copiar para a area de transferencia",
+      "value-en": "Copy to clipboard"
+    },
+    {
+      "key": "detailTooltip",
+      "value-pt": "Ver mais detalhes",
+      "value-en": "Take a close look"
     }
   ]
 }
