@@ -1,5 +1,5 @@
 # Paranoid
-Projeto que lista todos os dispositivos conectados na sua rede local, perfeito pra quem acha que está sendo seguido por algum russo ou indiano.
+Projeto que lista todos os dispositivos conectados na sua rede local (teoricamente nao são realmente todos), perfeito pra quem acha que está sendo seguido por algum russo ou indiano.
 
 Pra rodar o projeto não é necessário muito (Imagino que apenas uma máquina com Windows)
 
