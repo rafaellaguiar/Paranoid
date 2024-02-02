@@ -10,10 +10,12 @@ namespace Paranoid
     {
         IBlueService _blueService;
         ISpeculationService _speculationService;
-        public DispositivoController(IBlueService blueService, ISpeculationService speculationService)
+        IRoundService _roundService;
+        public DispositivoController(IBlueService blueService, ISpeculationService speculationService, IRoundService roundService)
         {
             _blueService = blueService;
             _speculationService = speculationService;
+            _roundService = roundService;
         }
 
         [Route("/")]

@@ -18,6 +18,12 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <div class="row-sm">
+                    <a class="flag" id="en" onclick="clickFlag(id)"><img src="icons/unitedstates_flags_flag_8833.png" height="24" width="24"/></a>
+                    <a class="flag" id="br" onclick="clickFlag(id)"><img src="icons/brazil_flags_flag_9043.png" height="24" width="24"/></a>  
+                </div>
+                
             </div>
         </nav>
     </header>
@@ -30,6 +36,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/location.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

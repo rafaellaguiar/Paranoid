@@ -1,0 +1,24 @@
+{
+  "locationConfig": [
+    {
+      "key": "main-text",
+      "value-pt": "Dispositivos na sua rede:",
+      "value-en": "Devices on your network:"
+    },
+    {
+      "key": "alias",
+      "value-pt": "Apelido",
+      "value-en": "Alias"
+    },
+    {
+      "key": "type",
+      "value-pt": "Tipo",
+      "value-en": "Type"
+    },
+    {
+      "key": "copyTooltip",
+      "value-en": "Copy to clipboard",
+      "value-pt": "Copiar para area de transferencia"
+    }
+  ]
+}

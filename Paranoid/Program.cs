@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IBlueService, BlueService>();
 builder.Services.AddScoped<ISpeculationService, SpeculationService>();
+builder.Services.AddScoped<IRoundService, RoundService>();
 
 var app = builder.Build();
 

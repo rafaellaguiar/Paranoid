@@ -72,3 +72,7 @@ td {
 .btn-save-alias {
     background: #5dbea3
 }
+
+.flag {
+    cursor: pointer;
+}

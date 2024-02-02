@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     updateAliases();
+    getLocationConfig();
 });
 
 function updateAliases() {
@@ -58,8 +59,8 @@ function changeInputVisibility() {
     $('#btnEdit').addClass('d-none')
 }
 
-var detalheDispositivo
-var mensagem = ""
+var detalheDispositivo;
+var mensagem = "";
 
 var modalDetalhe = new bootstrap.Modal(document.getElementById('detalheModal'), {
     keyboard: false
