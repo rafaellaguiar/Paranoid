@@ -11,14 +11,14 @@ namespace Paranoid.Service
         {
             string path = "LocationConfig/location.json";
 
-            var jsonFile = ObterJson(path);
+            var jsonFile = GetJson(path);
 
             var retorno = JsonConvert.DeserializeObject<LocationConfig>(jsonFile);
 
             return retorno;
         }
 
-        private static string ObterJson(string path)
+        private static string GetJson(string path)
         {
             return File.ReadAllText(path);
         }
