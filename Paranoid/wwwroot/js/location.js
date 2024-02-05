@@ -15,9 +15,8 @@ function clickFlag(language) {
         text = language == "en" ? locationObj[i].valueEn : locationObj[i].valuePt
         $("#" + locationObj[i].key).text(text);
 
-        if (locationObj[i].key.includes("Tooltip")) {
+        if (locationObj[i].key.includes("Tooltip"))
             $("." + locationObj[i].key + "Text").text(text)
-        }
 
         if (locationObj[i].key.includes("placeholder"))
             $("." + locationObj[i].key).attr({"placeholder": text})

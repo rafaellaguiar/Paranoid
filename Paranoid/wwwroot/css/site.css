@@ -72,6 +72,10 @@ td {
     background: #5dbea3
 }
 
+.btn-save-alias:hover {
+    background: #5fc9ac
+}
+
 .flag {
     cursor: pointer;
 }
