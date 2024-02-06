@@ -4,8 +4,8 @@ Projeto que lista todos os dispositivos conectados na sua rede local (teoricamen
 Pra rodar o projeto não é necessário muito (Imagino que apenas uma máquina com Windows)
 
 Além disso é necessário também a instalação dos pacotes nuget:  
-   • Newtonsoft.Json - v13.0.3  
-   • Microsoft.VisualStudio.Azure.Containers.Tools.Targets -v1.14.0  
+   • Newtonsoft.Json - v13.0.3 
+   • Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.14.0 
 
 -------------------------------------------------------------------------- // -------------------------------------------------------------------------
 
@@ -13,4 +13,6 @@ Project that lists all devices connected to your local network, perfect for anyo
 
 To run the project, you don't need much (I imagine just a Windows machine)
 
-In addition, it is also necessary to install the nuget packages Newtonsoft.Json(v13.0.3) and Microsoft.VisualStudio.Azure.Containers.Tools.Targets(v1.14.0)
+In addition, it is also necessary to install the nuget packages:
+   • Newtonsoft.Json - v13.0.3
+   • Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.14.0 
