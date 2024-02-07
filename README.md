@@ -13,6 +13,6 @@ Project that lists all devices connected to your local network, perfect for anyo
 
 To run the project, you don't need much (I imagine just a Windows machine)
 
-In addition, it is also necessary to install the nuget packages:
+In addition, it is also necessary to install the nuget packages:  
    • Newtonsoft.Json - v13.0.3  
    • Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.14.0 
