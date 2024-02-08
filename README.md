@@ -7,7 +7,7 @@ Além disso é necessário também a instalação dos pacotes nuget:
    • Newtonsoft.Json - v13.0.3  
    • Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.14.0 
 
--------------------------------------------------------------------------- // -------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 Project that lists all devices connected to your local network, perfect for anyone who thinks they are being followed by a Russian or Indian hacker.
 
